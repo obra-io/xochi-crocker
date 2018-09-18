@@ -59,41 +59,41 @@ body {background-color: black;}
 
 #o1 {    
     content: url("../assets/static/ballerina.png");
-    top:600px;
-    left:156px;    
+    top:775px;
+    left:290px;    
     position:absolute;   
     z-index: 4;
-    width: 175px;
+    width: 125px;
     height: auto;
 }
 
 #o2 {    
     content: url("../assets/static/child.png");
-    top:500px;
-    left:300px;    
+    top:800px;
+    left:435px;    
     position:absolute;   
     z-index: 4;
-    width: 150px;
+    width: 130px;
     height: auto;
 }
 
 #o3 {    
     content: url("../assets/static/soaring.png");
-    top:400px;
-    left:200px;    
+    top:185px;
+    left:245px;    
     position:absolute;   
     z-index: 4;
-    width: 225px;
+    width: 410px;
     height: auto;
 }
 
 #o4 {    
     content: url("../assets/static/fiddler.png");
     top:600px;
-    left:456px;    
+    left:526px;    
     position:absolute;   
     z-index: 4;
-    width: 100px;
+    width: 90px;
     height: auto;
 }
 
@@ -109,34 +109,34 @@ body {background-color: black;}
 
 #f1 {    
     content: url("../assets/ballerina.gif");
-    top:200px;
-    left:156px;    
+    top:760px;
+    left:255px;    
     position:absolute;   
 /*    display:none;*/
     z-index: 4;
-    width: 225px;
+    width: 200px;
     height: auto;
 }
 
 #f2 {    
     content: url("../assets/child.gif");
-    top:666px;
-    left:386px;       
+    top:805px;
+    left:371px;       
     position:absolute;   
 /*    display:none;*/
     z-index: 4;
-    width: 225px;
+    width:275px;
     height: auto;
 }
 
 #f3 {    
     content: url("../assets/soaring.gif");
-    top:66px;
-    left:186px;       
+    top:266px;
+    left:236px;       
     position:absolute;   
 /*    display:none;*/
     z-index: 4;
-    width: 125px;
+    width: 460px;
     height: auto;
 }
 
