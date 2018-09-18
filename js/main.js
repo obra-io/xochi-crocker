@@ -16,6 +16,14 @@ const feature_info = [  "Bailarina de la Muerte: She dances, she curtseys, but o
                         "Hummingbird: In Tino Rodriguez’s Xochipilli’s Ecstatic Universe, this pint sized green hummingbird is more than meets the eye. In ancient Aztec religion, Huitzilpotchtli is a deity of war and sun, that often represented in the form of a Hummingbird, which Tino captures here. Legend has it the bravest of warriors that gave it all on the battlefield were transformed into hummingbirds upon their passing and joined Huitzilpotchtli in the afterlife."
                       ];
 
+const infobox_width_and_pos =
+[[175, 660, 100],
+ [175, 660, 100],
+ [175, 660, 100],
+ [175, 660, 100],
+ [175, 660, 100]
+];
+
 const gaze_left_normals = 
 [[7, 0],      /* 0 degrees */
  [0, 12],     /* 90 degrees */
@@ -137,7 +145,8 @@ function moveEyes(x_pos, y_pos) {
 
 function focusOnFeature(feature, overlay, id) {
   feature.fadeIn(500); 
-  
+
+  $('#infobox').css({"width":infobox_width_and_pos[0][0], "top":infobox_width_and_pos[0][1], "left":infobox_width_and_pos[0][2]});  
   $('#infobox').text(feature_info[id]);
  
   $('.callout').delay(500).show(0);  
