@@ -187,7 +187,7 @@ $(document).ready(function() {
         focusOnFeature($('#f1'), $('#o1'), 0);
       } else if ((x_pos >=420) && (x_pos <= 520) && (y_pos >= 800) && (y_pos <= 960)) {
         focusOnFeature($('#f2'), $('#o2'), 1);
-      } else if ((x_pos >=350) && (x_pos <= 650) && (y_pos >= 250) && (y_pos <= 575)) {
+      } else if ((x_pos >=450) && (x_pos <= 650) && (y_pos >= 250) && (y_pos <= 550)) {
         focusOnFeature($('#f3'), $('#o3'), 2);
       } else if ((x_pos >=550) && (x_pos <= 615) && (y_pos >= 625) && (y_pos <= 750)) {
         focusOnFeature($('#f4'), $('#o4'), 3);
