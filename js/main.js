@@ -4,10 +4,10 @@
 
 var timeout;
 
-const gaze_origin = [860, 265];
+const gaze_origin = [640, 380];
 
-const pupil_left_origin = [815, 260];
-const pupil_right_origin = [880, 265];
+const pupil_left_origin = [305, 630];
+const pupil_right_origin = [400, 635];
 
 const feature_info = [  "Bailarina de la Muerte: She dances, she curtseys, but our baiilarina de la Muerte is a reminder of so much more. This tutu dawning dancer is an ode to the Mexican holiday, Dia de Los Muertos, celebrating friends and families who have passed while also supporting their spiritual journey. She serves as a momento mori, for both life and death as a sheared experience.",
                         "Embryo: With our Baby in Bloom, artist Tino Rodriguez highlights the importance of the lotus flower as a key part of Eastern philosophy, particularly Buddhism, symbolizing life itself. The embryo emphasizes this further adding to Tino’s belief that “out of water emerges life”. \[This rock-a-bye-baby, has dual meanings about…\]",
@@ -28,7 +28,7 @@ const gaze_right_normals =
  [-10, 0],    /* 180 degrees */
  [0, -5]];    /* 270 degrees */
 
-const gaze_limits = [475, 270, -275, -690];
+const gaze_limits = [360, 95, -620, -1200];
 
 function calcGazeAngle(x_pos, y_pos) {
   var x_component = x_pos - gaze_origin[0];
@@ -49,6 +49,8 @@ function calcGazeDistancePercent(x_pos, y_pos, angle) {
   var gaze_distance_percent = [0.0, 0.0];
   var x_component = x_pos - gaze_origin[0];
   var y_component = -(y_pos - gaze_origin[1]); 
+
+//  alert(x_component + " " + y_component);
 
   /* Determine distance from the gaze quadrant limits */
   if (angle < ((1 / 2) * Math.PI)) {
