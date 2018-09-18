@@ -4,10 +4,10 @@
 
 var timeout;
 
-const gaze_origin = [415, 220];
+const gaze_origin = [410, 250];
 
-const pupil_left_origin = [190, 410];
-const pupil_right_origin = [259, 417];
+const pupil_left_origin = [192, 407];
+const pupil_right_origin = [257, 417];
 
 const feature_info = [  "Bailarina de la Muerte: She dances, she curtseys, but our baiilarina de la Muerte is a reminder of so much more. This tutu dawning dancer is an ode to the Mexican holiday, Dia de Los Muertos, celebrating friends and families who have passed while also supporting their spiritual journey. She serves as a momento mori, for both life and death as a sheared experience.",
                         "Embryo: With our Baby in Bloom, artist Tino Rodriguez highlights the importance of the lotus flower as a key part of Eastern philosophy, particularly Buddhism, symbolizing life itself. The embryo emphasizes this further adding to Tino’s belief that “out of water emerges life”. \[This rock-a-bye-baby, has dual meanings about…\]",
@@ -28,7 +28,7 @@ const gaze_right_normals =
  [-10, 0],    /* 180 degrees */
  [0, -5]];    /* 270 degrees */
 
-const gaze_limits = [360, 95, -620, -1200];
+const gaze_limits = [215, 20, -380, -790];
 
 function calcGazeAngle(x_pos, y_pos) {
   var x_component = x_pos - gaze_origin[0];
@@ -50,7 +50,7 @@ function calcGazeDistancePercent(x_pos, y_pos, angle) {
   var x_component = x_pos - gaze_origin[0];
   var y_component = -(y_pos - gaze_origin[1]); 
 
-//  alert(x_component + " " + y_component);
+  //alert(x_component + " " + y_component);
 
   /* Determine distance from the gaze quadrant limits */
   if (angle < ((1 / 2) * Math.PI)) {
@@ -135,12 +135,14 @@ function moveEyes(x_pos, y_pos) {
   }, 500);
 }
 
-function focusOnFeature(feature, id) {
+function focusOnFeature(feature, overlay, id) {
   feature.fadeIn(500); 
   
   $('#infobox').text(feature_info[id]);
  
   $('.callout').delay(500).show(0);  
+
+  overlay.hide(0);
   
   $('.artwork').delay(500).css("filter", "blur(.5px) grayscale(80%)");
     
@@ -156,6 +158,7 @@ function focusOnBackground() {
   
   $('.feature').hide(0);  
   $('.callout').hide(0); 
+  $('.overlay').show();
 }
 
 $(document).ready(function() {
@@ -169,16 +172,16 @@ $(document).ready(function() {
     } else {
       moveEyes(x_pos, y_pos);
 
-      if ((x_pos >= 950) && (x_pos <= 1030) && (y_pos >= 700) && (y_pos <= 840)) {
-        focusOnFeature($('#f1'), 0);
-      } else if ((x_pos >=1100) && (x_pos <= 1230) && (y_pos >= 650) && (y_pos <= 900)) {
-        focusOnFeature($('#f2'), 1);
+      if ((x_pos >= 310) && (x_pos <= 380) && (y_pos >= 800) && (y_pos <= 930)) {
+        focusOnFeature($('#f1'), $('#o1'), 0);
+      } else if ((x_pos >=420) && (x_pos <= 520) && (y_pos >= 800) && (y_pos <= 960)) {
+        focusOnFeature($('#f2'), $('#o2'), 1);
       } else if ((x_pos >=1050) && (x_pos <= 1330) && (y_pos >= 100) && (y_pos <= 400)) {
-        focusOnFeature($('#f3'), 2);
+        focusOnFeature($('#f3'), $('#03'), 2);
       } else if ((x_pos >=1150) && (x_pos <= 1300) && (y_pos >= 500) && (y_pos <= 700)) {
-        focusOnFeature($('#f4'), 3);
+        focusOnFeature($('#f4'), $('#04'), 3);
       } else if ((x_pos >=500) && (x_pos <= 850) && (y_pos >= 50) && (y_pos <= 200)) {
-        focusOnFeature($('#f5'), 4);
+        focusOnFeature($('#f5'), $('#05'), 4);
       }
     }      
   });

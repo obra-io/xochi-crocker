@@ -21,8 +21,8 @@ body {background-color: black;}
 
 #pupil-l {   
     content: url("../assets/pupil-l.png"); 
-    top:410px;
-    left:190px;
+    top:407px;
+    left:192px;
     position:absolute; 
     width:25px;
     height: auto;
@@ -32,7 +32,7 @@ body {background-color: black;}
 #pupil-r {    
     content: url("../assets/pupil-r.png");
     top:417px;
-    left:259px;
+    left:260px;
     position:absolute; 
     width:12px;
     height: auto;
@@ -50,7 +50,7 @@ body {background-color: black;}
 }
 
 .feature {
-/*    display:none;*/
+    display:none;
 }
 
 .callout {
@@ -112,7 +112,7 @@ body {background-color: black;}
     top:770px;
     left:255px;    
     position:absolute;   
-/*    display:none;*/
+    display:none;
     z-index: 4;
     width: 175px;
     height: auto;
@@ -123,7 +123,7 @@ body {background-color: black;}
     top:805px;
     left:371px;       
     position:absolute;   
-/*    display:none;*/
+    display:none;
     z-index: 4;
     width:275px;
     height: auto;
@@ -134,7 +134,7 @@ body {background-color: black;}
     top:266px;
     left:196px;       
     position:absolute;   
-/*    display:none;*/
+    display:none;
     z-index: 4;
     width: 460px;
     height: auto;
@@ -145,7 +145,7 @@ body {background-color: black;}
     top:615px;
     left:475px;       
     position:absolute;   
-/*    display:none;*/
+    display:none;
     z-index: 4;
     width: 150px;
     height: auto;
@@ -156,7 +156,7 @@ body {background-color: black;}
     top:125px;
     left:-50px;       
     position:absolute;   
-/*    display:none;*/
+    display:none;
     z-index: 4;
     width: 325px;
     height: auto;
@@ -165,7 +165,7 @@ body {background-color: black;}
 #infobox { 
     padding: 5px 5px 5px 5px;
     top:660px;
-    left:615px;
+    left:100px;
     font-size: 12px;
     width: 175px;
     color: white;
