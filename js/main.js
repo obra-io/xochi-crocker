@@ -6,8 +6,8 @@ var timeout;
 
 const gaze_origin = [410, 250];
 
-const pupil_left_origin = [192, 407];
-const pupil_right_origin = [257, 417];
+const pupil_left_origin = [192, 410];
+const pupil_right_origin = [257, 420];
 
 const feature_info = [  "She dances, she curtseys, but our baiilarina de la Muerte is a reminder of so much more. This tutu dawning dancer is an ode to the Mexican holiday, Dia de Los Muertos, celebrating friends and families who have passed while also supporting their spiritual journey. She serves as a momento mori, for both life and death as a sheared experience.",
                         "With our Baby in Bloom, artist Tino Rodriguez highlights the importance of the lotus flower as a key part of Eastern philosophy, particularly Buddhism, symbolizing life itself. The embryo emphasizes this further adding to Tino’s belief that “out of water emerges life”.",
@@ -36,7 +36,7 @@ const gaze_right_normals =
  [-10, 0],    /* 180 degrees */
  [0, -5]];    /* 270 degrees */
 
-const gaze_limits = [215, 20, -380, -790];
+const gaze_limits = [215, 30, -380, -790];
 
 function calcGazeAngle(x_pos, y_pos) {
   var x_component = x_pos - gaze_origin[0];
