@@ -57,6 +57,56 @@ body {background-color: black;}
     display:none;
 }
 
+#o1 {    
+    content: url("../assets/static/ballerina.png");
+    top:676px;
+    left:856px;    
+    position:absolute;   
+    z-index: 4;
+    width: 225px;
+    height: auto;
+}
+
+#o2 {    
+    content: url("../assets/static/child.png");
+    top:676px;
+    left:856px;    
+    position:absolute;   
+    z-index: 4;
+    width: 225px;
+    height: auto;
+}
+
+#o3 {    
+    content: url("../assets/static/soaring.png");
+    top:676px;
+    left:856px;    
+    position:absolute;   
+    z-index: 4;
+    width: 225px;
+    height: auto;
+}
+
+#o4 {    
+    content: url("../assets/static/fiddler.png");
+    top:676px;
+    left:856px;    
+    position:absolute;   
+    z-index: 4;
+    width: 225px;
+    height: auto;
+}
+
+#o5 {    
+    content: url("../assets/static/humming.png");
+    top:676px;
+    left:856px;    
+    position:absolute;   
+    z-index: 4;
+    width: 225px;
+    height: auto;
+}
+
 #f1 {    
     content: url("../assets/ballerina.gif");
     top:676px;
@@ -110,14 +160,6 @@ body {background-color: black;}
     z-index: 4;
     width: 525px;
     height: auto;
-}
-
-#vbar {    
-    content: url("../assets/vbar.gif");
-    top:676px;
-    left:810px;
-    position:absolute;
-    z-index: 4;
 }
 
 #infobox { 
