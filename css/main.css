@@ -21,8 +21,8 @@ body {background-color: black;}
 
 #pupil-l {   
     content: url("../assets/pupil-l.png"); 
-    top:630px;
-    left:305px;
+    top:410px;
+    left:190px;
     position:absolute; 
     width:25px;
     height: auto;
@@ -31,10 +31,10 @@ body {background-color: black;}
 
 #pupil-r {    
     content: url("../assets/pupil-r.png");
-    top:635px;
-    left:400px;
+    top:417px;
+    left:259px;
     position:absolute; 
-    width:16px;
+    width:12px;
     height: auto;
     z-index: 2;
 }
