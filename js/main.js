@@ -17,11 +17,11 @@ const feature_info = [  "Bailarina de la Muerte: She dances, she curtseys, but o
                       ];
 
 const infobox_width_and_pos =
-[[175, 660, 100],
- [175, 660, 100],
- [175, 660, 100],
- [175, 660, 100],
- [175, 660, 100]
+[[250, 700, 25],
+ [300, 640, 250],
+ [260, 175, 200],
+ [300, 575, 210],
+ [300, 175, 250]
 ];
 
 const gaze_left_normals = 
@@ -146,7 +146,7 @@ function moveEyes(x_pos, y_pos) {
 function focusOnFeature(feature, overlay, id) {
   feature.fadeIn(500); 
 
-  $('#infobox').css({"width":infobox_width_and_pos[0][0], "top":infobox_width_and_pos[0][1], "left":infobox_width_and_pos[0][2]});  
+  $('#infobox').css({"width":infobox_width_and_pos[id][0], "top":infobox_width_and_pos[id][1], "left":infobox_width_and_pos[id][2]});  
   $('#infobox').text(feature_info[id]);
  
   $('.callout').delay(500).show(0);  
@@ -154,8 +154,9 @@ function focusOnFeature(feature, overlay, id) {
   overlay.hide(0);
   
   $('.artwork').delay(500).css("filter", "blur(.5px) grayscale(80%)");
+  $('.overlay').delay(500).css("filter", "blur(.5px) grayscale(80%)");
     
-  timeout = setTimeout(function(){ focusOnBackground(); }, 10000);
+  timeout = setTimeout(function(){ focusOnBackground(); }, 15000);
 }
 
 function focusOnBackground() {
@@ -164,6 +165,7 @@ function focusOnBackground() {
   timeout = null;
   
   $('.artwork').css("filter", "");
+  $('.overlay').css("filter", "");
   
   $('.feature').hide(0);  
   $('.callout').hide(0); 
@@ -185,12 +187,12 @@ $(document).ready(function() {
         focusOnFeature($('#f1'), $('#o1'), 0);
       } else if ((x_pos >=420) && (x_pos <= 520) && (y_pos >= 800) && (y_pos <= 960)) {
         focusOnFeature($('#f2'), $('#o2'), 1);
-      } else if ((x_pos >=1050) && (x_pos <= 1330) && (y_pos >= 100) && (y_pos <= 400)) {
-        focusOnFeature($('#f3'), $('#03'), 2);
-      } else if ((x_pos >=1150) && (x_pos <= 1300) && (y_pos >= 500) && (y_pos <= 700)) {
-        focusOnFeature($('#f4'), $('#04'), 3);
-      } else if ((x_pos >=500) && (x_pos <= 850) && (y_pos >= 50) && (y_pos <= 200)) {
-        focusOnFeature($('#f5'), $('#05'), 4);
+      } else if ((x_pos >=350) && (x_pos <= 650) && (y_pos >= 250) && (y_pos <= 575)) {
+        focusOnFeature($('#f3'), $('#o3'), 2);
+      } else if ((x_pos >=550) && (x_pos <= 615) && (y_pos >= 625) && (y_pos <= 750)) {
+        focusOnFeature($('#f4'), $('#o4'), 3);
+      } else if ((x_pos >=0) && (x_pos <= 225) && (y_pos >= 200) && (y_pos <= 350)) {
+        focusOnFeature($('#f5'), $('#o5'), 4);
       }
     }      
   });
